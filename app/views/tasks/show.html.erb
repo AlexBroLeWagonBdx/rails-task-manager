@@ -1,0 +1,21 @@
+<h1>Tasks#show</h1>
+
+<h2>
+  <%= @task.title %>
+</h2>
+
+<p>
+  <small>Créé le :
+    <%= @task.created_at %>
+  </small>
+</p>
+
+<p>Fait :
+  <% if @task.done == true %>
+    <%= "oui" %>
+  <% else %>
+    <%= "non" %>
+  <% end %>
+</p>
+
+<%= link_to "Retour vers index", tasks_path %>
